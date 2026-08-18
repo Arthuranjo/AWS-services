@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página informativa sobre tecnologias AWS: Amazon QLDB, QuickSight, RDS, Redshift e Timestream.">
+  <title>AWS Tech Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="header">
+    <a class="brand" href="#inicio" aria-label="AWS Tech Showcase">
+      <span class="brand-mark">λ</span>
+      <span>AWS<span class="brand-dot">.</span>Tech</span>
+    </a>
+
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#tecnologias">Tecnologias</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> AMAZON WEB SERVICES</div>
+        <h1>Dados que se transformam em <em>possibilidades.</em></h1>
+        <p>
+          Uma visão rápida de cinco serviços AWS voltados para bancos de dados,
+          analytics, business intelligence e dados de séries temporais.
+        </p>
+        <a class="hero-button" href="#tecnologias">
+          Explorar tecnologias
+          <span>↓</span>
+        </a>
+      </div>
+
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="orbit orbit-c"></div>
+        <div class="core">
+          <span>AWS</span>
+          <small>DATA</small>
+        </div>
+        <span class="node node-1">RDS</span>
+        <span class="node node-2">QLDB</span>
+        <span class="node node-3">RS</span>
+        <span class="node node-4">QS</span>
+        <span class="node node-5">TS</span>
+      </div>
+    </section>
+
+    <section class="section" id="tecnologias">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow"><span></span> ECOSSISTEMA AWS</div>
+          <h2>Conheça as tecnologias</h2>
+        </div>
+        <p>Serviços diferentes para desafios diferentes — do armazenamento relacional à análise de grandes volumes de dados.</p>
+      </div>
+
+      <div class="tech-grid">
+        <article class="tech-card featured">
+          <div class="card-top">
+            <div class="service-icon icon-qldb">QL</div>
+            <span class="card-number">01</span>
+          </div>
+          <div class="status">SERVIÇO HISTÓRICO</div>
+          <h3>Amazon QLDB</h3>
+          <p>
+            Banco de dados ledger que utilizava um diário imutável e verificável
+            para registrar alterações nos dados e manter um histórico completo.
+          </p>
+          <div class="tags">
+            <span>Ledger</span><span>Imutabilidade</span><span>Histórico</span>
+          </div>
+          <div class="notice">Suporte encerrado em 31/07/2025.</div>
+        </article>
+
+        <article class="tech-card">
+          <div class="card-top">
+            <div class="service-icon icon-qs">QS</div>
+            <span class="card-number">02</span>
+          </div>
+          <h3>Amazon QuickSight</h3>
+          <p>
+            Serviço de Business Intelligence para transformar dados em
+            visualizações, análises, dashboards e relatórios interativos.
+          </p>
+          <div class="tags">
+            <span>BI</span><span>Dashboards</span><span>Analytics</span>
+          </div>
+        </article>
+
+        <article class="tech-card">
+          <div class="card-top">
+            <div class="service-icon icon-rds">RDS</div>
+            <span class="card-number">03</span>
+          </div>
+          <h3>Amazon RDS</h3>
+          <p>
+            Serviço gerenciado de bancos de dados relacionais que simplifica
+            tarefas como provisionamento, backups, atualizações e escalabilidade.
+          </p>
+          <div class="tags">
+            <span>SQL</span><span>Relacional</span><span>Gerenciado</span>
+          </div>
+        </article>
+
+        <article class="tech-card">
+          <div class="card-top">
+            <div class="service-icon icon-redshift">RS</div>
+            <span class="card-number">04</span>
+          </div>
+          <h3>Amazon Redshift</h3>
+          <p>
+            Data warehouse em nuvem desenvolvido para análise de grandes
+            volumes de dados e workloads analíticos em escala.
+          </p>
+          <div class="tags">
+            <span>Data Warehouse</span><span>SQL</span><span>Analytics</span>
+          </div>
+        </article>
+
+        <article class="tech-card wide">
+          <div class="card-top">
+            <div class="service-icon icon-ts">TS</div>
+            <span class="card-number">05</span>
+          </div>
+          <div class="wide-content">
+            <h3>Amazon Timestream</h3>
+            <p>
+              Banco de dados especializado em séries temporais, indicado para
+              aplicações como IoT, métricas, monitoramento e telemetria.
+              Ele foi projetado para ingestão e análise de grandes volumes de
+              dados que mudam ao longo do tempo.
+            </p>
+            <div class="tags">
+              <span>Time Series</span><span>IoT</span><span>Monitoramento</span><span>Serverless</span>
+            </div>
+          </div>
+          <div class="mini-chart" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <svg viewBox="0 0 240 90" preserveAspectRatio="none">
+              <polyline points="0,70 35,58 65,64 95,30 125,44 155,18 185,33 215,12 240,22"/>
+            </svg>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="sobre">
+      <div class="about-card">
+        <div class="eyebrow"><span></span> VISÃO GERAL</div>
+        <h2>Uma arquitetura, diferentes especialidades.</h2>
+        <p>
+          Os serviços apresentados cobrem diferentes etapas do trabalho com dados:
+          armazenamento relacional, dados imutáveis, análise de séries temporais,
+          data warehousing e visualização de informações.
+        </p>
+        <div class="flow">
+          <span>Dados</span><b>→</b><span>Armazenamento</span><b>→</b><span>Análise</span><b>→</b><span>Insights</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>AWS.Tech</strong>
+      <span>Projeto educacional · Tecnologias AWS</span>
+    </div>
+    <span>Desenvolvido com HTML, CSS e JavaScript.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
