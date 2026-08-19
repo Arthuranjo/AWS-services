@@ -1,35 +1,23 @@
-const cards = document.querySelectorAll(".tech-card");
+const menu = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
+menu?.addEventListener("click", () => nav.classList.toggle("open"));
+
+document.querySelectorAll(".nav a").forEach(link => {
+  link.addEventListener("click", () => nav.classList.remove("open"));
+});
+
+const sections = document.querySelectorAll("main section[id]");
+const links = document.querySelectorAll(".nav a");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.animate(
-        [
-          { opacity: 0, transform: "translateY(18px)" },
-          { opacity: 1, transform: "translateY(0)" }
-        ],
-        {
-          duration: 650,
-          easing: "cubic-bezier(.2,.7,.2,1)",
-          fill: "forwards"
-        }
-      );
-      observer.unobserve(entry.target);
+      links.forEach(link => link.classList.toggle(
+        "active", link.getAttribute("href") === `#${entry.target.id}`
+      ));
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.35 });
 
-cards.forEach((card, index) => {
-  card.style.opacity = "0";
-  card.style.animationDelay = `${index * 80}ms`;
-  observer.observe(card);
-});
-
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener("click", (event) => {
-    const target = document.querySelector(link.getAttribute("href"));
-    if (!target) return;
-    event.preventDefault();
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-});
+sections.forEach(section => observer.observe(section));
